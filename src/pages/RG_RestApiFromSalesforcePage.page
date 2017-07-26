@@ -1,0 +1,18 @@
+<apex:page controller="RG_RestAPIFromSalesforce" sidebar="false">
+
+ 
+<apex:form >
+    
+    <apex:pageBlock >
+     
+            <apex:pageBlockTable value="{!queryResults}" var="qr">
+                
+                <apex:repeat value="{!listOfFields}" var="fieldName">
+                    <apex:column value="{!qr[fieldName]}"/> 
+                </apex:repeat>
+            </apex:pageBlockTable>
+    </apex:pageBlock>
+    
+</apex:form>
+
+</apex:page>
